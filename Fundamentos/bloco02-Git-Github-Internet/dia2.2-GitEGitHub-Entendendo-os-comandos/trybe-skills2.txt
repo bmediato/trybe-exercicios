@@ -3,5 +3,7 @@ O que vou aprender na trybe:
 - Unix
 - Bash
 - Git
-HTML
-CSS
+- JavaScript
+- HTML
+- CSS
+
