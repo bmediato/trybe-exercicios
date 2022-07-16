@@ -1,5 +1,6 @@
 .cor-de-fundo {
     background-color: yellow;
+    font-weight: bold;
 }
 .impar-cor {
 text-transform: uppercase;
@@ -13,4 +14,7 @@ h1, h3 {
 h1 {
     font-size: 40px;
     border: 1px solid black;
+}
+.lista{
+    font-size: 20px;
 }
