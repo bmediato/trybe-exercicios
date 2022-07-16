@@ -1,0 +1,9 @@
+h1, p {
+    text-align: center;
+}
+li:hover {
+    background-color: salmon;
+}
+li:active {
+    color: azure;
+}
