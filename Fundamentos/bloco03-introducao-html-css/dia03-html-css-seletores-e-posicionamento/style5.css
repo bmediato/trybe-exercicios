@@ -18,3 +18,25 @@ h1 {
 .lista{
     font-size: 20px;
 }
+.letra {
+    color: blue;
+}
+.fundo {
+    background-color: pink;
+}
+ul li#laranja:hover{
+font-weight: bold;
+color: orange;
+}
+ul li.verde:hover{
+    font-weight: bold;
+    color: green;
+}
+ul li#preto:hover{
+    font-weight: bold;
+    color: black;
+}
+ul li#amarelo:hover{
+    font-weight: bold;
+    color: yellow;
+}
