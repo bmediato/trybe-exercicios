@@ -1,6 +1,6 @@
 const myName = "Beatriz";
 const birthCity = "Volta Redonda";
-var birthYear = 2000;
+let birthYear = 2000;
 
 birthYear = 2030;
 birthCity = "Rio de Janeiro";
