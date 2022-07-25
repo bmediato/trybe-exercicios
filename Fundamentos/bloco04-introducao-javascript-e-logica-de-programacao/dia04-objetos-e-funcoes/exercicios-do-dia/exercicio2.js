@@ -14,3 +14,5 @@ let leitor = {
 
   leitor.livrosFavoritos.push({titulo1: 'Harry Potter e o Prisioneiro de Azkaban', autor1: 'Jk Rowling', editora1: 'Rocco',});
   console.log(leitor);
+
+  console.log(leitor.nome + ' tem 2 livros favoritos ' + leitor.livrosFavoritos[0].titulo + ' e ' + leitor.livrosFavoritos[1].titulo1);
