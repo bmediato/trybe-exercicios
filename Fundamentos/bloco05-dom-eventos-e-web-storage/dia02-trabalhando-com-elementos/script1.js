@@ -6,7 +6,7 @@ pai.appendChild(irmao);
 
 // 2.Crie um filho para elementoOndeVoceEsta
 let elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
-let filho = document.createElement('section');
+let filho = document.createElement('section'); // cria um novo elemeno
 filho.id = 'filho';
 elementoOndeVoceEsta.appendChild(filho);
 
@@ -18,4 +18,4 @@ primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilho);
 
 //4.A partir desse filho criado, acesse terceiro filho
 let filhoDoPrimeiro = document.getElementById('FilhoDoPrimeiroFilhoDoFilho');
-filhoDoPrimeiro.parentElement.lastElementChild.previousElementSibling;
+filhoDoPrimeiro.parentElement.parentElement.previousElementSibling;
