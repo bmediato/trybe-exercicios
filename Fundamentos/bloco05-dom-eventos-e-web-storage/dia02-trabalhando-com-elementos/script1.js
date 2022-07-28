@@ -11,4 +11,9 @@ filho.id = 'filho';
 elementoOndeVoceEsta.appendChild(filho);
 
 //3.Crie um filho para primeiroFilhoDoFilho
+let primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+let filhoDoPrimeiroFilho = document.createElement('section');
+filhoDoPrimeiroFilho.id = 'FilhoDoPrimeiroFilhoDoFilho';
+primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilho);
+
 //4.A partir desse filho criado, acesse terceiro filho
