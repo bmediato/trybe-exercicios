@@ -17,3 +17,5 @@ filhoDoPrimeiroFilho.id = 'FilhoDoPrimeiroFilhoDoFilho';
 primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilho);
 
 //4.A partir desse filho criado, acesse terceiro filho
+let filhoDoPrimeiro = document.getElementById('FilhoDoPrimeiroFilhoDoFilho');
+filhoDoPrimeiro.parentElement.lastElementChild.previousElementSibling;
