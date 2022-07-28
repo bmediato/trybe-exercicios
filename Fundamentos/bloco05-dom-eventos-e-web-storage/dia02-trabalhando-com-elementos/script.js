@@ -1,5 +1,6 @@
-// arquivo script.js
+const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+const pai = elementoOndeVoceEsta.parentElement;
+pai.style.color = 'blue';
 
-console.log(document.getElementById('start').nextSibling) // nó
-
-console.log(document.getElementById('start').nextElementSibling) // <p>elemento</p>
+const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+primeiroFilhoDoFilho.innerText = "Olá";
