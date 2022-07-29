@@ -20,12 +20,13 @@ primeiroFilhoDoFilho.appendChild(filhoDoPrimeiroFilho);
 let filhoDoPrimeiro = document.getElementById('FilhoDoPrimeiroFilhoDoFilho');
 filhoDoPrimeiro.parentElement.parentElement.previousElementSibling;
 
-let paiDopai = document.getElementById('paiDoPai');
-for (let index = pai.childNodes.length - 1; index >=0; index -=1) {
-    const currentChildren = pai.childNodes[index];
-    if (filhoAtual.id !== 'elementoOndeVoceEsta') { // Verifica se o id do filho atual é diferente de 'elementoOndeVoceEsta'
-        filhoAtual.remove(); // Remove o filhoAtual
-      }
+let paiP = document.getElementById('pai'); // recuperando o elemento pai
+
+for (let index = paiP.childNodes.length-1; index >=0; index -=1) {
+const currentChildren = paiP.childNodes[index]; // retornando a coleção de nós filhos do elemento pai
+if (currentChildren.id !== 'elementoOndeVoceEsta') {
+  currentChildren.remove();
 }
-const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho'); // Recupera o elemento com o id segundoEUltimoFilhoDoFilho
-segundoEUltimoFilhoDoFilho.remove(); // Remove o segundo filho do filho
+}
+const segundoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+segundoFilhoDoFilho.remove();
