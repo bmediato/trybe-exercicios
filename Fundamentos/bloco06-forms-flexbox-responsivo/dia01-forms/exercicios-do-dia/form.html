@@ -15,11 +15,11 @@
         <form action="">
             <div>
                 <label for="nome-completo"> Nome:
-                    <input type="text" id="nome-completo" min="10" max="40" name="nome">
+                    <input type="text" id="nome-completo" minlength="10" maxlength="40" name="nome">
                 </label>
                 <p></p>
                 <label for="email">E-mail:
-                    <input type="email" id="email" min="10" max="50" name="e-mail">
+                    <input type="email" id="email" minlength="10" maxlength="50" name="e-mail">
                 </label>
             </div>
             <p></p>
@@ -62,6 +62,7 @@
             </div>
             <p></p>
             <button type="submit" id="botao">Enviar</button>
+            <button type="reset" id="limpa">Limpar</button>
         </form>
         <script src="script.js"></script>
 </body>
