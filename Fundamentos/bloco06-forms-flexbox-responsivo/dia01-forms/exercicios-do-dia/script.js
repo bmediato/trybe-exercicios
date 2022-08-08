@@ -1,8 +1,12 @@
 window.onload = function () {
     const botao = document.getElementById('botao');
     botao.addEventListener('click', parouBotao);
+
     const limpaBotao = document.getElementById('limpa');
-    limpaBotao.addEventListener('click', limpaTudo)
+    limpaBotao.addEventListener('click', limpaTudo);
+
+    const concorda = document.getElementById('#concorda');
+    concorda.addEventListener('change', concordoFoto);
 }
 
 function parouBotao (event) {
@@ -18,4 +22,8 @@ function limpaTudo() {
         userInput.checked = false;
     }
     textArea.value = '';
+}
+
+function concordoFoto () {
+    botao.disable = !concorda.checked;
 }
