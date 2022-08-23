@@ -65,3 +65,14 @@ const books = [
 function authorBornIn1947() {
   return books.find((ano) => ano.birthYear === '1947')
 }
+
+function smallerName() {
+  let nameBook;
+  books.forEach((element) => {
+    if(element.name.length < nameBook) {
+      nameBook = element.name;
+    }
+  } )
+
+  return nameBook;
+}
