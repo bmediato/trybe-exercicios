@@ -84,3 +84,22 @@ const maiorQ60 = () => {
 }
 
 console.log(maiorQ60());
+
+//exercicio 5 
+
+// const ordemAlf = () => {
+// const genero = ['Fantasia', 'Ficção Científica'];
+// return books
+// .filter((book) => genero.includes(book.genre))
+// .map((book) => book.author.name).sort();
+// }
+// console.log(ordemAlf());
+
+function fantasyOrScienceFictionAuthors() {
+  const wantedGenres = ['Fantasia', 'Ficção Científica'];
+  return books
+    .filter((book) => wantedGenres.includes(book.genre))
+    .map((book) => book.author.name).sort();
+}
+
+console.log(fantasyOrScienceFictionAuthors());
