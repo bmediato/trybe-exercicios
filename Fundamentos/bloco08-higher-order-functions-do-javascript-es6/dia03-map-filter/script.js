@@ -61,7 +61,14 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
+// exercicio 1
 const nomes = books.map((elemento) => `${elemento.name} - ${elemento.genre} - ${elemento.author.name}`)
 
 console.log(nomes);
+
+// exercicio 2 
+const AutorEIdade = books.map((elemento) => ({
+author: elemento.author.name,
+age: elemento.releaseYear - elemento.author.birthYear,
+})).sort((a,b) => a.age - b.age);
+console.log(AutorEIdade);
