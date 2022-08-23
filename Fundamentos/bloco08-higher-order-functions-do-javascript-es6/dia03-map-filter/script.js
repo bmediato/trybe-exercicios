@@ -76,3 +76,11 @@ console.log(AutorEIdade);
 // exercicio 3
 const genero = books.filter((elemento) => elemento.genre === 'Ficção Científica' || elemento.genre === 'Fantasia')
 console.log(genero);
+
+// exercicio 4 
+const maiorQ60 = () => {
+  const currentYear = new Date().getFullYear();
+  return books.filter((elemento) => (elemento.releaseYear < currentYear - 60)).sort((a, b) => a.releaseYear - b.releaseYear);
+}
+
+console.log(maiorQ60());
