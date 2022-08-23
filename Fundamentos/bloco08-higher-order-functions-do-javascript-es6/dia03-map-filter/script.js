@@ -72,3 +72,7 @@ author: elemento.author.name,
 age: elemento.releaseYear - elemento.author.birthYear,
 })).sort((a,b) => a.age - b.age);
 console.log(AutorEIdade);
+
+// exercicio 3
+const genero = books.filter((elemento) => elemento.genre === 'Ficção Científica' || elemento.genre === 'Fantasia')
+console.log(genero);
