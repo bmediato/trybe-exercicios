@@ -61,7 +61,11 @@ const books = [
   },
 ];
 
+const media = () => {
+  const numberOfBooks = books.length;
+  const sumOfAges = books.reduce((sum, book) => (
+    sum + (book.releaseYear - book.author.birthYear)
+  ), 0);
+  return sumOfAges / numberOfBooks;
 
-const todosAutores = () => books.reduce((acc, curr) => `${acc} ${curr.author.name}.`, '')
-
-console.log(todosAutores());
+}
