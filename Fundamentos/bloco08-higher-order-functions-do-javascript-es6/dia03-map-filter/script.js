@@ -108,7 +108,16 @@ console.log(fantasyOrScienceFictionAuthors());
 
 const LivroMaisQ60 = () => {
   const currentYear = new Date().getFullYear();
-  return books.filter((elemento) => (elemento.releaseYear < currentYear - 60)).map((elemento) => elemento.name).sort();
+  return books.filter((elemento) => (elemento.releaseYear < currentYear - 60)).map((elemento) => elemento.name);
 }
 
 console.log(LivroMaisQ60());
+
+// exercicio 7 
+
+const iniciais = () => {
+  return books.filter((book) => (book.author.name[1] === '.' && book.author.name[4] === '.'
+&& book.author.name[7] === '.'))[0].name;
+}
+
+console.log(iniciais());
