@@ -103,3 +103,12 @@ function fantasyOrScienceFictionAuthors() {
 }
 
 console.log(fantasyOrScienceFictionAuthors());
+
+// exercicio 6 
+
+const LivroMaisQ60 = () => {
+  const currentYear = new Date().getFullYear();
+  return books.filter((elemento) => (elemento.releaseYear < currentYear - 60)).map((elemento) => elemento.name).sort();
+}
+
+console.log(LivroMaisQ60());
