@@ -60,64 +60,12 @@ const books = [
     releaseYear: 1928,
   },
 ];
-
-// exercicio 1
-const nomes = books.map((elemento) => `${elemento.name} - ${elemento.genre} - ${elemento.author.name}`)
-
-console.log(nomes);
-
-// exercicio 2 
-const AutorEIdade = books.map((elemento) => ({
-author: elemento.author.name,
-age: elemento.releaseYear - elemento.author.birthYear,
-})).sort((a,b) => a.age - b.age);
-console.log(AutorEIdade);
-
-// exercicio 3
-const genero = books.filter((elemento) => elemento.genre === 'Ficção Científica' || elemento.genre === 'Fantasia')
-console.log(genero);
-
-// exercicio 4 
-const maiorQ60 = () => {
-  const currentYear = new Date().getFullYear();
-  return books.filter((elemento) => (elemento.releaseYear < currentYear - 60)).sort((a, b) => a.releaseYear - b.releaseYear);
+//exercicio 1 
+const nome = (array) => {
+  return array.map((elemento) => {
+    return `${elemento.name} - ${elemento.genre} - ${elemento.name.author}`
+  })
 }
+console.log(nome(books));
 
-console.log(maiorQ60());
-
-//exercicio 5 
-
-// const ordemAlf = () => {
-// const genero = ['Fantasia', 'Ficção Científica'];
-// return books
-// .filter((book) => genero.includes(book.genre))
-// .map((book) => book.author.name).sort();
-// }
-// console.log(ordemAlf());
-
-function fantasyOrScienceFictionAuthors() {
-  const wantedGenres = ['Fantasia', 'Ficção Científica'];
-  return books
-    .filter((book) => wantedGenres.includes(book.genre))
-    .map((book) => book.author.name).sort();
-}
-
-console.log(fantasyOrScienceFictionAuthors());
-
-// exercicio 6 
-
-const LivroMaisQ60 = () => {
-  const currentYear = new Date().getFullYear();
-  return books.filter((elemento) => (elemento.releaseYear < currentYear - 60)).map((elemento) => elemento.name);
-}
-
-console.log(LivroMaisQ60());
-
-// exercicio 7 
-
-const iniciais = () => {
-  return books.filter((book) => (book.author.name[1] === '.' && book.author.name[4] === '.'
-&& book.author.name[7] === '.'))[0].name;
-}
-
-console.log(iniciais());
+//exercicio 2 
