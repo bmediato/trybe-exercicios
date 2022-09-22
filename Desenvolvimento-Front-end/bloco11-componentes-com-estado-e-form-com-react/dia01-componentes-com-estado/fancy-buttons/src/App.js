@@ -1,36 +1,55 @@
-import React from 'react';
 import './App.css';
+import React from 'react';
+
+
 
 class App extends React.Component {
   constructor() {
-    super();
-    /* Para definir um estado inicial ao componente, a ser definido
-    no momento em que o componente for colocado na tela, faça uma atribuição
-    de um objeto à chave `state` do `this`, ou seja, ao `this.state` */
+    super()
     this.state = {
-      numeroDeCliques: 0,
-    };
-    this.handleClick = this.handleClick.bind(this);
+      numeroClicado: 0,
+      cliques: 0,
+      clicado: 0
+    }
   }
-  handleClick() {
-    /* Você **NUNCA** deve fazer atribuições diretamente a `this.state`. Deve,
-    ao invés disso, SEMPRE utilizar a função `this.setState(novoEstado)` do
-    React */
-    this.setState({
-      numeroDeCliques: 1,
-    });
+
+  trocaCor = (num) => {
+    return num % 2=== 0 ?  'green' : 'pink';
+  }
+
+   handleClick = () => {  
+    this.setState((estadoAnterior, _props) => ({
+      numeroClicado: estadoAnterior.numeroClicado + 1,
+    }));
+  }
+  
+   handleClickTwo = () => {   
+    this.setState((estadoAnterior, _props) => ({
+      cliques: estadoAnterior.cliques + 1,
+    }));
+  }
+  
+   handleClickThree = () => {
+    this.setState((estadoAnterior, _props) => ({
+      clicado: estadoAnterior.clicado + 1,
+    }));
   }
   render() {
-    /* Para LER o estado, você pode usar `this.state.chaveDoMeuEstado` */
-    const { numeroDeCliques } = this.state;
-    return (
-      <button
-        type="button"
-        onClick={ this.handleClick }
-      >
-        { numeroDeCliques }
-      </button>
+    const {numeroClicado, cliques, clicado} = this.state;
+    return(
+      <div>
+        <button type="button" 
+        onClick={this.handleClick} 
+        style={{backgroundColor: this.trocaCor(numeroClicado)}}>{numeroClicado}</button>
+
+        <button type="button" 
+        onClick={this.handleClickTwo} 
+        style={{backgroundColor: this.trocaCor(cliques)}}>{cliques}</button>
+        <button type="button" 
+        onClick={this.handleClickThree} style={{backgroundColor: this.trocaCor(clicado)}}>{clicado}</button>
+      </div>
     );
   }
 }
+
 export default App;
