@@ -1,0 +1,42 @@
+.cor-de-fundo {
+    background-color: yellow;
+    font-weight: bold;
+}
+.impar-cor {
+text-transform: uppercase;
+}
+.par-maiusculo{
+    color: green;
+}
+h1, h3 {
+    color: red;
+}
+h1 {
+    font-size: 40px;
+    border: 1px solid black;
+}
+.lista{
+    font-size: 20px;
+}
+.letra {
+    color: blue;
+}
+.fundo {
+    background-color: pink;
+}
+ul li#laranja:hover{
+font-weight: bold;
+color: orange;
+}
+ul li.verde:hover{
+    font-weight: bold;
+    color: green;
+}
+ul li#preto:hover{
+    font-weight: bold;
+    color: black;
+}
+ul li#amarelo:hover{
+    font-weight: bold;
+    color: yellow;
+}

@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.cabecalho {
+    background-color: #e76f51;
+    border: 1px solid #001219;
+    padding: 7px;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+    color: #14213d;
+    list-style-type: none;
+}
+.imagem{
+    width: 250px;
+}
+.content{
+    margin: auto;
+    flex-grow: 1;
+}
+.list {
+    font-size: 25px;
+    background-color: #f4a261;
+    border: 1px solid #001219;
+    padding: 5px 5px 5px 20px;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+
+}
+body{
+   padding: 10px;
+   background-color: #ffffff;
+   color: #14213d;
+   list-style-type: none;
+}
+.fatos{
+    font-size: 21px;
+    display:inline-block;
+    padding: 5px;
+    width: 60%;
+    margin-top: 20px;
+    background-color: #fed9b7;
+}
+.classificacao{
+    display: inline-block;
+    padding: 8px;
+    width: 30%;
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 19px;
+    margin: 20px;
+    background-color: #f9dcc4;
+}
+footer{
+    background-color: #e76f51;
+    width: 100%;
+    font-size: 20px;
+    padding: 8px;
+    text-align: right;
+}
+h2, h3, p, ul {
+    font-family: 'Comfortaa', cursive;
+}
+.titulo{
+    font-family: 'Rubik Moonrocks', cursive;
+}
+.article{
+    padding: 15px;
+    text-align: center;
+}
+.article-small{
+    display: inline-block;
+    width: 40%;
+    line-height: 30px;
+    padding:20px;
+}
+.curiosidade{
+    text-align: left;
+    line-height: 30px;
+    background-color: #ee9b00;
+    border: 1px solid black;
+    padding: 10px;
+}
+#contato{
+    line-height: 30px;
+    font-size: 15px;
+}
