@@ -15,7 +15,7 @@ const books = [
     genre: 'Fantasia',
     author: {
       name: 'J. R. R. Tolkien',
-      birthYear: 1992,
+      birthYear: 1892,
     },
     releaseYear: 1954,
   },
@@ -55,16 +55,29 @@ const books = [
     genre: 'Terror',
     author: {
       name: 'H. P. Lovecraft',
-      birthYear: 1990,
+      birthYear: 1890,
     },
     releaseYear: 1928,
   },
 ];
-
-const nascimento = (array) => {
-  return array.every((elemento) => {
-    return elemento.author.birthYear >= 1901 || elemento.author.birthYear <= 2000
+//exercicio 1 
+const nome = (array) => {
+  return array.map((elemento) => {
+    return `${elemento.name} - ${elemento.genre} - ${elemento.name.author}`
   })
 }
+console.log(nome(books));
 
-console.log(nascimento(books));
+//exercicio 2 
+const livros = books.map((elemento) => {
+    return {age: elemento.releaseYear - elemento.author.birthYear,
+    author: elemento.author.name}
+  }).sort((a, b) => a.age - b.age);
+
+console.log(livros);
+
+//exercicio 3 
+const genero = books.filter((elemento) => {
+  elemento.genre === 'Fantasia' || elemento.genre === 'Ficção Cienctífica';
+})
+console.log(genero);
