@@ -1,8 +1,10 @@
-const numbers = [18, 19, 23, 53, 4, 5, 76, 23, 54];
 
-const pares = numbers.filter((elemento) => elemento%2 === 0);
+const números = [18, 19, 23, 53, 4, 5, 76, 23, 54];
 
-const soma = pares.reduce((acc, curr) => acc + curr);
+const pares = números.filtro((elemento) => elemento % 2 === 0);
 
-console.log(pares);
-console.log(soma);
+const soma = pares.reduz((acc, curr) => acc + curr);
+
+consola.log(pares);
+consola.log(soma);
+
