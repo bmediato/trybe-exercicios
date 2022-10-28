@@ -61,6 +61,10 @@ const books = [
   },
 ];
 
-const nascimento = (array) =>  array.every((elemento) => elemento.author.birthYear >= 1901 || elemento.author.birthYear <= 2000);
+const nascimento = (array) => {
+  return array.every((elemento) => {
+    return elemento.author.birthYear >= 1901 || elemento.author.birthYear <= 2000
+  })
+}
 
 console.log(nascimento(books));
