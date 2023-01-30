@@ -1,6 +1,12 @@
-const readline = require('readline-sync');
+const fs = require('fs').promises;
 
-const name = readline.question('Qual seu nome? ');
-const age = readline.questionInt('Qual sua idade? ');
+async function main() {
+  try {
+    const data = await fs.readFile('./meu-arquivo.txt', 'utf-8');
+    console.log(data);
+  } catch (err) {
+    console.error(`Erro ao ler o arquivo: ${err.message}`);
+  }
+}
 
-console.log(`Hello, ${name}! You are ${age} years old!`);
+main()
