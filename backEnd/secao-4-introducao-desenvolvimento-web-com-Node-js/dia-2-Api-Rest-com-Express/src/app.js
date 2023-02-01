@@ -28,4 +28,13 @@ app.get('/movies/:id', async (req, res) => {
   }
 });
 
+app.get('/movies', async (req, res) => {
+  try {
+    const movies = await leitura();
+    res.status(200).json(movies);
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
+
 module.exports = app;
