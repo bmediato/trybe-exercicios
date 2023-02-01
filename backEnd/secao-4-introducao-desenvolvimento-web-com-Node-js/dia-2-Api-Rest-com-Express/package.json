@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node srv/server.js",
+    "dev": "nodemon src/server.js",
+    "linr": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslint.json ."
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,7 @@
   },
   "devDependencies": {
     "eslint": "6.8.0",
-    "eslint-config-trybe-backend": "1.0.1"
+    "eslint-config-trybe-backend": "1.0.1",
+    "nodemon": "2.0.15"
   }
 }
