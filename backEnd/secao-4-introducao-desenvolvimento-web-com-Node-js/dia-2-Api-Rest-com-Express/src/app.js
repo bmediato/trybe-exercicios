@@ -82,4 +82,18 @@ app.delete('/movies/:id', async (req, res) => {
   }
 });
 
+app.get('/movies/search', async (req, res) => {
+  try {
+    const { q } = req.params;
+    const movies = await leitura();
+    if (q) {
+      const filterMovie = movies.filter((el) => el.movie.includes(q));
+      return res.status(200).json(filterMovie);
+    }
+    res.status(200).end();
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
+
 module.exports = app;
