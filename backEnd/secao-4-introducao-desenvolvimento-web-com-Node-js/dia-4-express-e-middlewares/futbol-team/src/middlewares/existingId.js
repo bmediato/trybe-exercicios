@@ -5,12 +5,11 @@ const teams = [
 
 const existingId = (req, res, next) => {
   const id = Number(req.params.id);
-
-  if (teams.some((idTeam) => idTeam.id === id)) {
-    next();
-  } else {
-    res.status(404).send({ message: 'Id não encontrado' });
-  }
+  if (!teams.some((idTeam) => idTeam.id === id)) {
+ return res
+  .status(404).json({ message: 'Time não encontrado' }); 
+}
+  next();
 };
 
 module.exports = { existingId };
