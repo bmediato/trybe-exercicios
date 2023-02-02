@@ -48,15 +48,15 @@ const mockFile = JSON.stringify({
 
 
 describe('Testando a API Cacau Trybe', function () {
-  beforeEach(function () {
-    sinon.stub(fs.promises, 'readFile')
-      .resolves(mockFile);
-  });
+  // beforeEach(function () {
+  //   sinon.stub(fs.promises, 'readFile')
+  //     .resolves(mockFile);
+  // });
 
-  afterEach(function () {
-    sinon.restore();
-  });
-  describe('Usando o método GET em /chocolates', function () {
+  // afterEach(function () {
+  //   sinon.restore();
+  // });
+ describe('Usando o método GET em /chocolates', function () {
     it('Retorna a lista completa de chocolates!', async function () {
       const output = [
         { id: 1, name: 'Mint Intense', brandId: 1 },
