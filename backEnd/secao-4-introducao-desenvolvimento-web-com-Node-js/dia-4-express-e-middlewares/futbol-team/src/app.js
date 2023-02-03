@@ -2,6 +2,8 @@
 
 const express = require('express');
 require('express-async-errors');
+const morgan = require('morgan');
+const cors = require('cors');
 const validateTeam = require('./middlewares/validateTeam');
 const existingId = require('./middlewares/existingId');
 const apiCredentials = require('./middlewares/apiCredentials');
@@ -14,9 +16,21 @@ const teams = [
   { id: 2, nome: 'Sociedade Esportiva Palmeiras', sigla: 'PAL' },
 ];
 
-app.use(express.static('../imagem'));
+app.use((req, _res, next) => {
+  console.log('req.method:', req.method);
+  console.log('req.path:', req.path);
+  console.log('req.params:', req.params);
+  console.log('req.query:', req.query);
+  console.log('req.headers:', req.headers);
+  console.log('req.body:', req.body);
+  next();
+});
+
 app.use(apiCredentials);
+app.use(morgan('dev'));
 app.use(express.json());
+app.use(express.static('../imagem'));
+app.use(cors());
 
 app.get('/teams', (req, res) => res.json(teams));
 
