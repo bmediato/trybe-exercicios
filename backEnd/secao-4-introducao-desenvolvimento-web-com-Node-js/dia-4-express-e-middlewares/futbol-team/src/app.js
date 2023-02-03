@@ -1,5 +1,3 @@
-// src/app.js
-
 const express = require('express');
 require('express-async-errors');
 const morgan = require('morgan');
@@ -16,20 +14,10 @@ const teams = [
   { id: 2, nome: 'Sociedade Esportiva Palmeiras', sigla: 'PAL' },
 ];
 
-app.use((req, _res, next) => {
-  console.log('req.method:', req.method);
-  console.log('req.path:', req.path);
-  console.log('req.params:', req.params);
-  console.log('req.query:', req.query);
-  console.log('req.headers:', req.headers);
-  console.log('req.body:', req.body);
-  next();
-});
-
 app.use(apiCredentials);
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(express.static('../imagem'));
+app.use(express.static('./imagem'));
 app.use(cors());
 
 app.get('/teams', (req, res) => res.json(teams));
@@ -72,5 +60,7 @@ app.delete('/teams/:id', existingId, (req, res) => {
   teams.splice(index, 1);
   res.sendStatus(204);
 });
+
+app.use((req, res) => res.sendStatus(404));
 
 module.exports = app;
