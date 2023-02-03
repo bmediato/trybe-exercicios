@@ -5,11 +5,11 @@ const teams = [
 
 const existingId = (req, res, next) => {
   const id = Number(req.params.id);
-  if (teams.some((team) => team.id === id)) {
-    next();
-  } else {
-    res.status(404).json({ message: 'id invalido' });
-  }
+  if (!teams.some((team) => team.id === id)) {
+ res.status(404).json({ message: 'Time não encontrado' }); 
+}
+  
+  next();
 };
 
 module.exports = existingId;
