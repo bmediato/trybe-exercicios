@@ -4,11 +4,13 @@ const validationPrice = require('./middlewares/validationPrice');
 const validationDescription = require('./middlewares/validationDescription');
 const validationCreatedAt = require('./middlewares/validationCreatedAt');
 const validationRating = require('./middlewares/validationRating');
+const validationDifficulty = require('./middlewares/validationDifficulty');
 
 const app = express();
 app.use(express.json());
 
 app.post('/activities', 
+validationDifficulty,
 validationRating,
 validationCreatedAt, 
 validationDescription, 
