@@ -1,8 +1,10 @@
 // src/app.js
 
 const express = require('express');
+require('express-async-errors');
 const validateTeam = require('./middlewares/validateTeam');
 const existingId = require('./middlewares/existingId');
+const apiCredentials = require('./middlewares/apiCredentials');
 
 const app = express();
 
@@ -12,6 +14,7 @@ const teams = [
   { id: 2, nome: 'Sociedade Esportiva Palmeiras', sigla: 'PAL' },
 ];
 
+app.use(apiCredentials);
 app.use(express.json());
 
 app.get('/teams', (req, res) => res.json(teams));
