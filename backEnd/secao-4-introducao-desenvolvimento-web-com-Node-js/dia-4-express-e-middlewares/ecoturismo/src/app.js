@@ -6,11 +6,13 @@ const validationCreatedAt = require('./middlewares/validationCreatedAt');
 const validationRating = require('./middlewares/validationRating');
 const validationDifficulty = require('./middlewares/validationDifficulty');
 const generateToken = require('./utils/generateToken');
+const auth = require('./middlewares/auth');
 
 const app = express();
 app.use(express.json());
 
-app.post('/activities', 
+app.post('/activities',
+auth, 
 validationDifficulty,
 validationRating,
 validationCreatedAt, 
