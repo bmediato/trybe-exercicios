@@ -16,7 +16,7 @@ app.get('/teams', (req, res) => res.json(teams));
 
 app.get('/teams/:id', (req, res) => {
   const id = Number(req.params.id);
-  const team = teams.find(t => t.id === id);
+  const team = teams.find((t) => t.id === id);
   if (team) {
     res.json(team);
   } else {
@@ -39,7 +39,7 @@ app.post('/teams', (req, res) => {
 app.put('/teams/:id', (req, res) => {
   const id = Number(req.params.id);
   const requiredProperties = ['nome', 'sigla'];
-  const team = teams.find(t => t.id === id);
+  const team = teams.find((t) => t.id === id);
   if (team && requiredProperties.every((property) => property in req.body)) {
     const index = teams.indexOf(team);
     const updated = { id, ...req.body };
@@ -52,7 +52,7 @@ app.put('/teams/:id', (req, res) => {
 
 app.delete('/teams/:id', (req, res) => {
   const id = Number(req.params.id);
-  const team = teams.find(t => t.id === id);
+  const team = teams.find((t) => t.id === id);
   if (team) {
     const index = teams.indexOf(team);
     teams.splice(index, 1);
