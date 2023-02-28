@@ -1,4 +1,4 @@
-const {Book} = require('../models');
+const { Book } = require('../models');
 
 const getAll = async () => {
   const result = await Book.findAll();
@@ -7,6 +7,11 @@ const getAll = async () => {
 
 const getById = async (id) => {
   const result = await Book.findByPk(id);
+  return result;
+}
+
+const getByAuthor = async (author) => {
+  const result = await Book.finAll({where: {author}})
   return result;
 }
 
@@ -23,9 +28,16 @@ const updateBook = async(id, title, author, pageQuantity) => {
     return updateB;
 }
 
+const deleteBook = async (id) => {
+  const book = await Book.destroy( {where : {id}});
+  return book;
+}
+
 module.exports = {
   getAll,
   getById,
   createBook,
   updateBook,
+  deleteBook,
+  getByAuthor,
 }

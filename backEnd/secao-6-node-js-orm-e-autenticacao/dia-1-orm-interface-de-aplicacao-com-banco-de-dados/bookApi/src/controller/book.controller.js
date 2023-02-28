@@ -1,13 +1,14 @@
 const bookService = require('../service/book.service');
 
 const getAll = async (req, res) => {
-  try{
-    const book = await bookService.getAll();
-    return res.status(200).json(book);
-  } catch(e) {
-    console.log(e.message);
-    return res.status(500).json({message: 'Ocorreu um erro'});
-  }
+    const {author} = req.query;
+    let books;
+    if(author) {
+      books = await bookService.getByAuthor(author);
+    } else {
+      books = await bookService.getAll();
+    }
+    return res.status(200).json(books);
 }
 
 const getById = async (req, res) => {
@@ -33,9 +34,21 @@ const updateBook = async (req, res) => {
   return res.status(200).json(result);
 }
 
+const deleteBook = async (req, res) => {
+  try{
+    const {id} = req.params;
+    await bookService.deleteBook(id);
+    return res.status(200).json({message: 'Excluido com sucesso!'})
+  } catch (e) {
+    console.log(e.message);
+    return res.status(500).json({message: 'algo deu errado'});
+  }
+}
+
 module.exports = {
   getAll,
   getById,
   createBook,
   updateBook,
+  deleteBook,
 }
