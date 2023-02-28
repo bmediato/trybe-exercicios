@@ -13,12 +13,18 @@ const getAll = async (req, res) => {
 const getById = async (req, res) => {
   const {id} = req.params;
    const result = await bookService.getById(id);
-  if(!result) return res.status(404).json({message: 'Book not found'});
+   if(!result) return res.status(404).json({message: 'Book not found'});
    return res.status(200).json(result);
+}
 
+const createBook = async(req, res) => {
+  const {title, author, pageQuantity} = req.body;
+  const result = await bookService.createBook(title, author, pageQuantity);
+  return res.status(201).json(result);
 }
 
 module.exports = {
   getAll,
   getById,
+  createBook,
 }
