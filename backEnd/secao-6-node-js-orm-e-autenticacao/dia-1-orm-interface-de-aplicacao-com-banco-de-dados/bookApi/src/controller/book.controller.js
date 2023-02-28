@@ -19,15 +19,15 @@ const getById = async (req, res) => {
 }
 
 const createBook = async (req, res) => {
-  const {title, author, pageQuantity} = req.body;
-  const result = await bookService.createBook(title, author, pageQuantity);
+  const {title, author, pageQuantity, publisher} = req.body;
+  const result = await bookService.createBook(title, author, pageQuantity, publisher);
   return res.status(201).json(result);
 }
 
 const updateBook = async (req, res) => {
   const {id} = req.params;
-  const {title, author, pageQuantity} = req.body;
-  const result = await bookService.updateBook(id, title, author, pageQuantity);
+  const {title, author, pageQuantity, publisher} = req.body;
+  const result = await bookService.updateBook(id, title, author, pageQuantity, publisher);
 
   if(!result) return res.status(404).json({message: 'Book not found'});
 
