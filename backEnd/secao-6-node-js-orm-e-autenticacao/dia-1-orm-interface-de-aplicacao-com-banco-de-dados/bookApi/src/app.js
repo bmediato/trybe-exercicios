@@ -5,5 +5,6 @@ const app = express();
 app.use(express.json());
 
 app.get('/books', bookController.getAll);
+app.get('/books/:id', bookController.getById);
 
 module.exports = app;
