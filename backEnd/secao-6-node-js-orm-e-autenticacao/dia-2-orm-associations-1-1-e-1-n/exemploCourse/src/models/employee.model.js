@@ -1,4 +1,10 @@
 // src/models/employee.model.js
+/**
+ * 
+ * @param {*} sequelize 
+ * @param {*} DataTypes 
+ * @returns 
+ */
 
 module.exports = (sequelize, DataTypes) => {
   const Employee = sequelize.define('Employee', {
@@ -10,12 +16,15 @@ module.exports = (sequelize, DataTypes) => {
   {
     timestamps: false, // remove a obrigatoriedade de utilizar os campos `createdAt` e `updatedAt`
     tableName: 'employees',
-    underscored: true,
+    underscored: true, //faz o papel do snakeze transforma
   });
 
   Employee.associate = (models) => {
-    Employee.hasOne(models.Address,
-      { foreignKey: 'employeeId', as: 'addresses' });
+    Employee.hasMany(models.Address,
+      { 
+        foreignKey: 'employeeId', 
+         as: 'addresses' 
+      });
   };
 
   return Employee;

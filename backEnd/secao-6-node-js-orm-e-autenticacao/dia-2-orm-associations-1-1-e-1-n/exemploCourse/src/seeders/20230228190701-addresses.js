@@ -1,4 +1,4 @@
-'use strict';
+// src/seeders/[timestamp]-addresses.js
 
 module.exports = {
   up: async (queryInterface, _Sequelize) => {

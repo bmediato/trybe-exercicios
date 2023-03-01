@@ -1,4 +1,4 @@
-'use strict';
+// src/migrations/[timestamp]-create-employee.js
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -26,7 +26,7 @@ module.exports = {
     });
   },
 
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('employees');
-  }
+  down: async (queryInterface, _Sequelize) => {
+    return queryInterface.dropTable('employees');
+  },
 };

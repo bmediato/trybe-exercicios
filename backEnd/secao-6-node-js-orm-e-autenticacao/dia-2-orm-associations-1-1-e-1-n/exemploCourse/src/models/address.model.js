@@ -17,9 +17,11 @@ module.exports = (sequelize, DataTypes) => {
 
   Address.associate = (models) => {
   // define o tipo de relacionamento
-    Address.belongsTo(models.Employee,
+    Address.belongsTo(models.Employee, //belongs to epara quando tem uma chave estrangeira na tabela
     // define qual a foreign key a ser criada
-      { foreignKey: 'employeeId', as: 'employees' });
+      { foreignKey: 'employeeId', //mesmo nome do de cima
+       as: 'employees' // dar nome ao relacionamento que essas tabelas tem 
+      });
   };
 
   return Address;

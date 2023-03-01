@@ -1,4 +1,4 @@
-'use strict';
+// src/migrations/[timestamp]-create-addresses.js
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
@@ -25,21 +25,21 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         // Configuram o que deve acontecer ao atualizar ou excluir um usuário
-        onUpdate: 'CASCADE',
+        onUpdate: 'CASCADE', //faça a deleção em cascata, irá deletar todos os campos que tem essa relação
         onDelete: 'CASCADE',
         field: 'employee_id',
         // Informa que o campo é uma Foreign Key (Chave estrangeira)
         references: {
           // Informa a tabela da referência da associação
-          model: 'employees',
+          model: 'employees', //tem que chamar exatamente como a outra migration chama ou nome que esta dentro do banco
           // Informa a coluna da referência que é a chave correspondente
-          key: 'id',
+          key: 'id', //chave referenciada da outra tabela
         },
       },
     });
   },
 
-  down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('addresses');
-  }
+  down: async (queryInterface, _Sequelize) => {
+    return queryInterface.dropTable('addresses');
+  },
 };

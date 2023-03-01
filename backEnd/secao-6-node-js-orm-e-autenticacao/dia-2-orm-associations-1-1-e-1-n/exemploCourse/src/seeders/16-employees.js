@@ -1,8 +1,8 @@
-'use strict';
+// src/seeders/[timestamp]-employees.js
 
 module.exports = {
   up: async (queryInterface, _Sequelize) => {
-    return queryInterface.bulkInsert('employees',
+    return queryInterface.bulkInsert('employees', //nome exato da tabela
       [
         {
           first_name: 'Marcos',
@@ -33,5 +33,3 @@ module.exports = {
     return queryInterface.bulkDelete('employees', null, {});
   },
 };
-
-
