@@ -8,7 +8,7 @@ module.exports = {
           city: 'Belo Horizonte',
           street: 'Rua Flórida',
           number: 1080,
-          employee_id: 1,
+          employee_id: 1,  //nome aqui tem que ser em snakecase
         },
         {
           city: 'São Paulo',
