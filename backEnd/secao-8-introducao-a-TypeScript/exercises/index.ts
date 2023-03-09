@@ -37,3 +37,8 @@ console.log(`Losango com D = 75cm e d=25cm: ${Ex.getDiamondArea(75, 25)}cm²`);
 console.log(`Trapézio que tem B = 100cm, b = 70cm e altura = 50cm: ${Ex.getTrapezeAre(50, 100, 70)}cm²`);
 console.log(`Trapézio que tem B = 75cm, b = 50cm e altura = 35cm: ${Ex.getTrapezeAre(35, 75, 50)}cm²`);
 console.log(`Trapézio que tem B = 150cm, b = 120cm e altura = 80cm: ${Ex.getTrapezeAre(80, 150, 120)}cm²`);
+
+console.log(`Círculo com raio = 25cm: ${Ex.getCircleArea(25)}cm²`);
+console.log(`Círculo com raio = 100cm: ${Ex.getCircleArea(100)}cm²`);
+console.log(`Círculo com raio = 12,2cm: ${Ex.getCircleArea(12.5)}cm²`);
+

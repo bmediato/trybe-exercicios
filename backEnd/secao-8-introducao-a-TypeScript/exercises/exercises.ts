@@ -32,3 +32,8 @@ export function getDiamondArea(Dbigger: number, dsmall: number): number {
 export function getTrapezeAre(height: number, Base: number, base: number): number {
   return ((Base + base) * height) / 2;
 }
+
+export function getCircleArea(raio: number): number {
+  const Pi = Math.PI;
+  return Pi * raio ** 2;
+}
