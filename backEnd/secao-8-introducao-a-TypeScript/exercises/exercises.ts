@@ -24,3 +24,11 @@ export function triangleCheck(
   const checkSideC = (sideA - sideB) < sideC && sideC < (sideA + sideB);
   return checkSideA && checkSideB && checkSideC;
 }
+
+export function getDiamondArea(Dbigger: number, dsmall: number): number {
+  return (Dbigger * dsmall) / 2;
+}
+
+export function getTrapezeAre(height: number, Base: number, base: number): number {
+  return ((Base + base) * height) / 2;
+}

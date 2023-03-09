@@ -27,3 +27,9 @@ console.log("\nVERIFICA A EXISTÊNCIA DE TRIÂNGULOS CUJOS LADOS TÊM:");
 console.log(`- 10cm, 5cm e 3cm: ${Ex.triangleCheck(10, 5, 3)}`);
 console.log(`- 10cm, 5cm e 3cm: ${Ex.triangleCheck(10, 5, 8)}`);
 console.log(`- 10cm, 5cm e 3cm: ${Ex.triangleCheck(30, 30, 30)}`);
+
+console.log("\n AREA DE UM:");
+
+console.log(`Losango com D = 32cm e d=18cm: ${Ex.getDiamondArea(32, 18)}cm²`);
+console.log(`Losango com D = 200cm e d=50cm: ${Ex.getDiamondArea(200, 50)}cm²`);
+console.log(`Losango com D = 75cm e d=25cm: ${Ex.getDiamondArea(75, 25)}cm²`);
