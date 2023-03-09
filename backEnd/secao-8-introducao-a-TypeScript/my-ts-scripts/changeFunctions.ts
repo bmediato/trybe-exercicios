@@ -35,3 +35,15 @@ const sortInput = (param: number[]) => {
 
 console.log(sortInput(numberList));
 
+// function 4 - Essa função é responsável por receber um objeto e formar uma frase utilizando as chaves do mesmo.
+
+const peopleInput = {
+  name: 'Rui',
+  age: 23,
+};
+
+const createSimpleSentence = (param: { name: string, age: number }) => {
+  return `Olá, meu nome é ${param.name} e tenho ${param.age} anos.`;
+}
+
+console.log(createSimpleSentence(peopleInput));
