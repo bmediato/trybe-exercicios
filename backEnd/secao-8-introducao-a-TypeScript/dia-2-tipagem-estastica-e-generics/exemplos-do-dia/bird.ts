@@ -1,3 +1,4 @@
+//type aliases
 type obj = {
   bird: string;
 }
@@ -16,3 +17,13 @@ type addres = {
   numero: number;
 
 }
+
+// type union
+
+type Estados = 'liquido' | 'solido' | 'gasoso';
+
+type numberOrString = number | string;
+
+type SO = 'linux' | 'macOs' | 'windows';
+
+type vogais = 'a' | 'e' | 'i' | 'o' | 'u';
