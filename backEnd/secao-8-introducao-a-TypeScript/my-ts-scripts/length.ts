@@ -2,10 +2,10 @@
 
 const units = ['km', 'hm', 'dam', 'm', 'dm', 'cm', 'mm'];
 
-function convert(value: number, fromUnit: string, toUnit: string): number {
-  const fromIndex = units.indexOf(fromUnit); // pegamos o index da unidade base no array
-  const toIndex = units.indexOf(toUnit); // pegamos o index da unidade para a conversão
-  const exponent = toIndex - fromIndex; // calculamos o expoente a partir da diferença dos index
+function convert(valor: number, unidadeBase: string, unidadeConversao: string): number {
+  const fromIndex = units.indexOf(unidadeBase);
+  const toIndex = units.indexOf(unidadeConversao);
+  const expoente = toIndex - fromIndex;
 
-  return value * Math.pow(10, exponent);
+  return valor * Math.pow(10, expoente);
 }
