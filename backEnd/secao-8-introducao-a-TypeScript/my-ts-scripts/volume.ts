@@ -1,3 +1,5 @@
+import readline from 'readline';
+
 const units4 = ['km', 'hm', 'dam', 'm', 'dm', 'cm', 'mm'];
 
 function convert(valor: number, unidadeBase: string, unidadeConversao: string): number {
