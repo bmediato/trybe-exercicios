@@ -18,6 +18,14 @@ export default class BookModel {
     this.connection = connection;
   }
 
+  public async getAll(): Promise<Book[]> {
+    const [rows] = await this.connection.execute<(Book & RowDataPacket)[]>(
+      'SELECT * FROM books'
+    );
+
+    return rows;
+  }
+
   public async create(book: Book): Promise<Book> {
     const { title, price, author, isbn } = book;
 
