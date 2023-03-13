@@ -1,0 +1,8 @@
+// ./tsconfig.json
+{
+  "extends": "@tsconfig/node16/tsconfig.json", // estendemos a configuração base para o Node 16
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./build" // pasta onde nossos arquivos compilados serão salvos
+  }
+}
