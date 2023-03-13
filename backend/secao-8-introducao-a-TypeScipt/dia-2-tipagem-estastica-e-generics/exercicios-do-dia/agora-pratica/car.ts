@@ -1,4 +1,4 @@
-class car {
+class Car {
   brand: string;
   color: string;
   door: number;
@@ -30,4 +30,4 @@ class car {
   }
 }
 
-export default car;
+export default Car;
