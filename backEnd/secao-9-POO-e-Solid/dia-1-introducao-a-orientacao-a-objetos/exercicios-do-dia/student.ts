@@ -57,14 +57,30 @@ class Student {
 
     this._assignmentsGrades = value;
   }
+  sumGrades(): number {
+    return [...this.examsGrades, ...this.assignmentsGrades]
+      .reduce((previousNote, note) => {
+        const nextNote = note + previousNote;
+
+        return nextNote;
+      }, 0);
+  }
+
+  sumAverageGrade(): number {
+    const sumGrades = this.sumGrades();
+    const divider = this.examsGrades.length + this.assignmentsGrades.length;
+
+    return Math.round(sumGrades / divider);
+  }
 }
 
 // Para testar!
 
 const personOne = new Student('202001011', 'Maria da Silva');
 
+personOne.examsGrades = [25, 20, 23, 23];
+personOne.assignmentsGrades = [45, 45];
+
 console.log(personOne);
-
-const personTwo = new Student('202001012', 'João da Silva');
-
-console.log(personTwo);
+console.log('Soma de todas as notas: ', personOne.sumGrades());
+console.log('Média de todas as notas: ', personOne.sumAverageGrade());
