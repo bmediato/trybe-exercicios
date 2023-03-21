@@ -12,3 +12,13 @@ class MeleeCharacter extends Character {
     console.log('Voando');
   }
 }
+
+class LongRangeCharacter extends Character {
+  talk(): void {
+    console.log('Buenos dias');
+  }
+
+  specialMode(): void {
+    console.log('super visão');
+  }
+}
