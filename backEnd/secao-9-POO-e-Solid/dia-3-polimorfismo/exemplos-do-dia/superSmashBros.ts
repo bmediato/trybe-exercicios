@@ -1,6 +1,11 @@
 abstract class Character {
   abstract talk(): void;
   abstract specialMode(): void;
+
+  static characterPresentation(character: Character): void {
+    character.talk();
+    character.specialMode();
+  }
 }
 
 class MeleeCharacter extends Character {
@@ -32,8 +37,11 @@ class LongRangeCharacter extends Character {
 const yoshi = new MeleeCharacter('Yoshi', 'super dragon');
 const samus = new LongRangeCharacter('Samus', 'Zero Laser');
 
-console.log(yoshi.talk());
-console.log(yoshi.specialMode());
+// console.log(yoshi.talk());
+// console.log(yoshi.specialMode());
 
-console.log(samus.specialMode());
-console.log(samus.talk());
+// console.log(samus.specialMode());
+// console.log(samus.talk());
+
+Character.characterPresentation(yoshi);
+Character.characterPresentation(samus);
