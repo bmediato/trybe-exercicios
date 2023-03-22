@@ -1,3 +1,3 @@
-interface IFutebol {
+export interface IFutebol {
   chuteira: string;
 }
