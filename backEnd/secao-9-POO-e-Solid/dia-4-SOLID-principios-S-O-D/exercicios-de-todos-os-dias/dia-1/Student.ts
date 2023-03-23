@@ -44,8 +44,23 @@ class School {
     if (value.length > 2) throw new Error('Só é permitido 2 notas de trabalho');
     this._trabalho = value;
   }
+
+  calculaNota(): number {
+    return [...this._prova, ...this._trabalho].reduce((acc, nota) => acc + nota, 0)
+  }
+
+  mediaDasNotas(): number {
+    const tamanho = [...this._prova, ...this._trabalho].length;
+    return Math.round(this.calculaNota() / +tamanho);
+  }
 }
 
 const personOne = new School('20220328859', 'Beatriz Mediato');
 
+personOne.prova = [25, 20, 23, 23];
+personOne.trabalho = [45, 45];
+
+
 console.log(personOne);
+console.log(`Soma de todas as notas: ${personOne.calculaNota()}`);
+console.log(`Media das notas: ${personOne.mediaDasNotas()}`)
