@@ -31,6 +31,15 @@ use('class');
 // db.superheroes.countDocuments({'aspects.hairColor': {$in: ['black', 'no hair']}});
 
 // 11
-db.superheroes.countDocuments({'aspects.hairColor': {$nin: ['black', 'no hair']}})
+// db.superheroes.countDocuments({'aspects.hairColor': {$nin: ['black', 'no hair']}})
 
 // 12
+db.superheroes.countDocuments({'aspects.hairColor': {$not: {$gt: 180}}});
+
+// 13
+// 14
+// 15
+// 16 
+// 17
+// 18
+// 19
