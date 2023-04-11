@@ -28,7 +28,9 @@ use('class');
 // db.superheroes.find({'aspects.hairColor': {$in: ['black', 'no hair']}});
 
 // 10
-db.superheroes.countDocuments({'aspects.hairColor': {$in: ['black', 'no hair']}});
+// db.superheroes.countDocuments({'aspects.hairColor': {$in: ['black', 'no hair']}});
 
 // 11
+db.superheroes.countDocuments({'aspects.hairColor': {$nin: ['black', 'no hair']}})
+
 // 12
