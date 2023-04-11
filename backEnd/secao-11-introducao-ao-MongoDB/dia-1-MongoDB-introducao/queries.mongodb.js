@@ -25,4 +25,13 @@ use('movies');
 // db.filmes.find({ano: {$in: [1995, 1968, 2001]}});
 
 // 9 
-db.filmes.find({ano: {$nin: [2013, 2008]}});
+// db.filmes.find({ano: {$nin: [2013, 2008]}});
+
+//10
+// db.filmes.find({$and: [{ano: {$gt: 2000}}, {'avaliacao.bom': {$gt: 8}}]});
+
+//11
+// db.filmes.find({$or: [{ano: {$gt: 2000}}, {'avaliacao.bom': {$gt: 8}}]});
+
+//12
+db.filmes.find({diretor: { $not: {$eq: 'Michael Bay'}}});
