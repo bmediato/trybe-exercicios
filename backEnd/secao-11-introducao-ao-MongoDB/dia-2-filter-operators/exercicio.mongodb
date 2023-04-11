@@ -1,0 +1,4 @@
+use('class');
+
+// exercicio 1
+db.superheroes.find().pretty();
