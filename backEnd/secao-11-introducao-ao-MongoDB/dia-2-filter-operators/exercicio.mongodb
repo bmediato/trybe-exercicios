@@ -43,9 +43,11 @@ db.superheroes.find().pretty();
 // db.superheroes.find({$and: [{'aspects.height': {$in: [180, 200]}}, {publisher: 'Marvel Comics'}]})
 
 // 15
-db.superheroes.find({$and: [{'aspects.weight': {$gte: 80, $lte: 100}}, {race: {$in: ['Human', 'Mutant']}}, {publisher: {$ne: 'DC Comics'}}]});
+// db.superheroes.find({$and: [{'aspects.weight': {$gte: 80, $lte: 100}}, {race: {$in: ['Human', 'Mutant']}}, {publisher: {$ne: 'DC Comics'}}]});
 
-// 16 
+// 16
+db.superheroes.countDocuments({race: {$exists: false}});
+
 // 17
 // 18
 // 19
