@@ -1,7 +1,7 @@
 use('class');
 
 // 1
-// db.superheroes.find().pretty();
+db.superheroes.find().pretty();
 
 // 2
 // db.superheroes.find({'aspects.height': {$lt: 180}});
@@ -34,9 +34,11 @@ use('class');
 // db.superheroes.countDocuments({'aspects.hairColor': {$nin: ['black', 'no hair']}})
 
 // 12
-db.superheroes.countDocuments({'aspects.hairColor': {$not: {$gt: 180}}});
+// db.superheroes.countDocuments({'aspects.hairColor': {$not: {$gt: 180}}});
 
 // 13
+db.superheroes.find({$nor: [{race: 'human'}, {'aspects.height': {$gt: 180}}]});
+
 // 14
 // 15
 // 16 
