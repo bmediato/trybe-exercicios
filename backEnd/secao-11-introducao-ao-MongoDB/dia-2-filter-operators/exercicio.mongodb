@@ -13,5 +13,8 @@ use('class');
 // db.superheroes.countDocuments({'aspects.height': {$lte: 180}});
 
 // 5
-db.superheroes.findOne({'aspects.height': {$gte: 200}});
+// db.superheroes.findOne({'aspects.height': {$gte: 200}});
+
+//6
+db.superheroes.countDocuments({'aspects.height': {$gte: 200}});
 
