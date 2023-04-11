@@ -18,3 +18,6 @@ db.bios.find().pretty().limit(3);
 
 // sexto exercicio 
 db.bios.find().pretty().skip(5).limit(2);
+
+// setimo exercicio 
+db.bios.countDocuments();
