@@ -49,7 +49,9 @@ db.superheroes.find().pretty();
 // db.superheroes.countDocuments({race: {$exists: false}});
 
 // 17
-db.superheroes.countDocuments({'aspects.hairColor': {$exists: true}});
+// db.superheroes.countDocuments({'aspects.hairColor': {$exists: true}});
 
 // 18
+db.superheroes.deleteOne({publisher: 'Sony Pictures'});
+
 // 19
