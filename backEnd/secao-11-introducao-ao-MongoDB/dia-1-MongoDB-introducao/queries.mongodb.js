@@ -34,4 +34,4 @@ use('movies');
 // db.filmes.find({$or: [{ano: {$gt: 2000}}, {'avaliacao.bom': {$gt: 8}}]});
 
 //12
-db.filmes.find({diretor: { $not: {$eq: 'Michael Bay'}}});
+// db.filmes.find({diretor: { $not: {$eq: 'Michael Bay'}}});
