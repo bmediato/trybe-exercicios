@@ -37,9 +37,11 @@ db.superheroes.find().pretty();
 // db.superheroes.countDocuments({'aspects.hairColor': {$not: {$gt: 180}}});
 
 // 13
-db.superheroes.find({$nor: [{race: 'human'}, {'aspects.height': {$gt: 180}}]});
+// db.superheroes.find({$nor: [{race: 'human'}, {'aspects.height': {$gt: 180}}]});
 
 // 14
+db.superheroes.find({$and: [{'aspects.height': {$in: [180, 200]}}, {publisher: 'Marvel Comics'}]})
+
 // 15
 // 16 
 // 17
