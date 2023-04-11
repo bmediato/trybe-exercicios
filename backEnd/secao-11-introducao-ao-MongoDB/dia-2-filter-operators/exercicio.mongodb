@@ -46,8 +46,10 @@ db.superheroes.find().pretty();
 // db.superheroes.find({$and: [{'aspects.weight': {$gte: 80, $lte: 100}}, {race: {$in: ['Human', 'Mutant']}}, {publisher: {$ne: 'DC Comics'}}]});
 
 // 16
-db.superheroes.countDocuments({race: {$exists: false}});
+// db.superheroes.countDocuments({race: {$exists: false}});
 
 // 17
+db.superheroes.countDocuments({'aspects.hairColor': {$exists: true}});
+
 // 18
 // 19
