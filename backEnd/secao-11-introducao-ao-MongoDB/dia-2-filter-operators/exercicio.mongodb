@@ -1,4 +1,6 @@
 use('class');
 
 // exercicio 1
-db.superheroes.find().pretty();
+// db.superheroes.find().pretty();
+
+db.superheroes.find({'aspects.height': {$lt: 180}});
