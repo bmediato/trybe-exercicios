@@ -22,9 +22,11 @@ use('class');
 // db.superheroes.find({'aspects.eyeColor': 'green'});
 
 // 8
-db.superheroes.countDocuments({'aspects.eyeColor': 'blue'});
+// db.superheroes.countDocuments({'aspects.eyeColor': 'blue'});
 
 // 9
+
+
 // 10
 // 11
 // 12
