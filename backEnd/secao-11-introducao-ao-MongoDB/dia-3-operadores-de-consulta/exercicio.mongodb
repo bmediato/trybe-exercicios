@@ -3,11 +3,18 @@ use('cinema');
 // db.movies.find();
 
 // 1
-db.movies.find({
-  category: {
-    $all: ['action', 'adventure']
-  }
-})
+// db.movies.find({
+//   category: {
+//     $all: ['action', 'adventure']
+//   }
+// })
 
 // 2
+db.movies.find({ 
+  category: {
+    $all: ['action', 'sci-fi']
+  },
+  imdbRating: {$gt: 7}
+});
+
 // 3
