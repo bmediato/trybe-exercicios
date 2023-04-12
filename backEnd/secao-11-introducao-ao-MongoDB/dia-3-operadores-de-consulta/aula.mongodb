@@ -4,12 +4,18 @@ use('aula11_3');
 
 // 1
 // db.itens.find({ tags: 'lemon'});
+
 // 2
-db.itens.find({
-  tags: {$all: ['lemon', 'orange']}
-})
+// db.itens.find({ tags: {$all: ['lemon', 'orange']}})
+
 // 3
+// db.itens.find({ tags: {$all: ['lemon', 'orange', 'grapefruit']}});
+
 // 4
+// db.itens.find({quantidade: {$elemMatch: { $gt: 70, $lt: 100}}});
+
 // 5
+// db.itens.countDocuments({quantidade: {$elemMatch: {$gt: 100}}})
+
 // 6
 // 7
