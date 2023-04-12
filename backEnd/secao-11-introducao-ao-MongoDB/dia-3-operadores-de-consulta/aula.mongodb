@@ -1,0 +1,15 @@
+use('aula11_3');
+
+// db.itens.find();
+
+// 1
+// db.itens.find({ tags: 'lemon'});
+// 2
+db.itens.find({
+  tags: {$all: ['lemon', 'orange']}
+})
+// 3
+// 4
+// 5
+// 6
+// 7
