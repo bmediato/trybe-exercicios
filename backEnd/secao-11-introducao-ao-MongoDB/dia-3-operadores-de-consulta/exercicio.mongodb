@@ -1,0 +1,13 @@
+use('cinema');
+
+// db.movies.find();
+
+// 1
+db.movies.find({
+  category: {
+    $all: ['action', 'adventure']
+  }
+})
+
+// 2
+// 3
