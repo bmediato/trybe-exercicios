@@ -77,9 +77,13 @@ use('cinema');
 // ]});
 
 // 12
-db.movies.find({
-  description: {$regex: /^the/i}
-})
+// db.movies.find({
+//   description: {$regex: /^the/i}
+// })
 
 // 13
+db.movies.find({
+  description: {$regex: /humanity.$/i}
+})
+
 // 14
