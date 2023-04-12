@@ -32,13 +32,18 @@ use('cinema');
 // }, {_id: 0, title: 1, ratings: 1});
 
 // 5
-db.movies.find({
-  ratings: {
-    $elemMatch: {$gte: 64, $lte:105, $mod: [9,0]},
-  }
-}, {_id:0, title: 1, ratings: 1});
+// db.movies.find({
+//   ratings: {
+//     $elemMatch: {$gte: 64, $lte:105, $mod: [9,0]},
+//   }
+// }, {_id:0, title: 1, ratings: 1});
 
 // 6
+db.movies.find({
+  category: { $all: ['adventure']},
+  ratings: {$elemMatch: {$gt: 103}}
+}, {_id: 0, title: 1, ratings: 1, category: 1});
+
 // 7
 // 8
 // 9
