@@ -39,12 +39,16 @@ use('cinema');
 // }, {_id:0, title: 1, ratings: 1});
 
 // 6
-db.movies.find({
-  category: { $all: ['adventure']},
-  ratings: {$elemMatch: {$gt: 103}}
-}, {_id: 0, title: 1, ratings: 1, category: 1});
+// db.movies.find({
+//   category: { $all: ['adventure']},
+//   ratings: {$elemMatch: {$gt: 103}}
+// }, {_id: 0, title: 1, ratings: 1, category: 1});
 
 // 7
+db.movies.find({
+  category: { $size: 2}
+}, {_id: 0, title: 1});
+
 // 8
 // 9
 // 10
