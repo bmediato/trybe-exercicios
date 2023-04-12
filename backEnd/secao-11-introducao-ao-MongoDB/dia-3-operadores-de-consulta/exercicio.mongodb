@@ -87,3 +87,8 @@ db.movies.find({
 })
 
 // 14
+db.movies.find({
+  $expr: {
+    $lt: ['$budget', '$grossWorldwide']
+  }
+})
