@@ -61,15 +61,21 @@ use('cinema');
 // });
 
 // 10
-db.movies.find({
-  $or: [{
-    category: {$all: ['sci-fi']} 
-  }, {
-    ratigns: {$elemMatch: {$gt: 199}}
-  }]
-}, {_id: 0, title: 1, ratings: 1, category:1});
+// db.movies.find({
+//   $or: [{
+//     category: {$all: ['sci-fi']} 
+//   }, {
+//     ratigns: {$elemMatch: {$gt: 199}}
+//   }]
+// }, {_id: 0, title: 1, ratings: 1, category:1});
 
 // 11
+db.movies.find({ $and: [
+  { ratings: { $size: 4 } },
+  { category: { $in: ["adventure", "family"] } },
+  { imdbRating: { $not: { $lt: 7 } }}
+]});
+
 // 12
 // 13
 // 14
