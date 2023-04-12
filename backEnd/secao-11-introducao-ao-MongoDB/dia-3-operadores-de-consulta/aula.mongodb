@@ -18,4 +18,21 @@ use('aula11_3');
 // db.itens.countDocuments({quantidade: {$elemMatch: {$gt: 100}}})
 
 // 6
+// db.itens.find({
+//   tags: {
+//     $size: 4
+//   }
+// })
+
 // 7
+// db.itens.find({
+//   $expr: { 
+//     $gt: ['$valor_entrada_itens', '$valor_saida_itens']
+//   }});
+
+// 8
+db.itens.find({
+  categoria: {
+    $regex: /papel/i
+  }
+})
