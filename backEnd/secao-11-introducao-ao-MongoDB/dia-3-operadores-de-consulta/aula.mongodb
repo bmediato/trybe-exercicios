@@ -31,8 +31,22 @@ use('aula11_3');
 //   }});
 
 // 8
+// db.itens.find({
+//   categoria: {
+//     $regex: /^papel/i
+//   }
+// });
+
+// 9 
+// db.itens.find({
+//   tags: {
+//     $regex: /pen$/i
+//   }
+// })
+
+// 10
 db.itens.find({
-  categoria: {
-    $regex: /papel/i
+  valor_entrada_itens: {
+    $mod: [2,0]
   }
 })
