@@ -70,12 +70,16 @@ use('cinema');
 // }, {_id: 0, title: 1, ratings: 1, category:1});
 
 // 11
-db.movies.find({ $and: [
-  { ratings: { $size: 4 } },
-  { category: { $in: ["adventure", "family"] } },
-  { imdbRating: { $not: { $lt: 7 } }}
-]});
+// db.movies.find({ $and: [
+//   { ratings: { $size: 4 } },
+//   { category: { $in: ["adventure", "family"] } },
+//   { imdbRating: { $not: { $lt: 7 } }}
+// ]});
 
 // 12
+db.movies.find({
+  description: {$regex: /^the/i}
+})
+
 // 13
 // 14
