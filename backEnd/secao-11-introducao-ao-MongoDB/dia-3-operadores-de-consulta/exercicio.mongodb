@@ -10,11 +10,28 @@ use('cinema');
 // })
 
 // 2
-db.movies.find({ 
-  category: {
-    $all: ['action', 'sci-fi']
-  },
-  imdbRating: {$gt: 7}
-});
+// db.movies.find({ 
+//   category: {
+//     $all: ['action', 'sci-fi']
+//   },
+//   imdbRating: {$gt: 7}
+// });
 
 // 3
+db.movies.find({
+  ratings: {
+    $elemMatch: {$gt: 103}
+  }
+}, {title: 1, ratings: 1, _id: 0})
+
+// 4
+// 5
+// 6
+// 7
+// 8
+// 9
+// 10
+// 11
+// 12
+// 13
+// 14
