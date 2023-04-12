@@ -1,0 +1,52 @@
+use('aula11_3');
+
+// db.itens.find();
+
+// 1
+// db.itens.find({ tags: 'lemon'});
+
+// 2
+// db.itens.find({ tags: {$all: ['lemon', 'orange']}})
+
+// 3
+// db.itens.find({ tags: {$all: ['lemon', 'orange', 'grapefruit']}});
+
+// 4
+// db.itens.find({quantidade: {$elemMatch: { $gt: 70, $lt: 100}}});
+
+// 5
+// db.itens.countDocuments({quantidade: {$elemMatch: {$gt: 100}}})
+
+// 6
+// db.itens.find({
+//   tags: {
+//     $size: 4
+//   }
+// })
+
+// 7
+// db.itens.find({
+//   $expr: { 
+//     $gt: ['$valor_entrada_itens', '$valor_saida_itens']
+//   }});
+
+// 8
+// db.itens.find({
+//   categoria: {
+//     $regex: /^papel/i
+//   }
+// });
+
+// 9 
+// db.itens.find({
+//   tags: {
+//     $regex: /pen$/i
+//   }
+// })
+
+// 10
+db.itens.find({
+  valor_entrada_itens: {
+    $mod: [2,0]
+  }
+})
