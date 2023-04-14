@@ -20,15 +20,21 @@ use('class');
 // )
 
 // 16
-db.xmen.updateMany(
-  { class: { $in: ["omega", "gama"] } },
-  {
-    $currentDate: { lastUpdate: { $type: "timestamp" } },
-    $max: { power: 500 },
-  },
-);
+// db.xmen.updateMany(
+//   { class: { $in: ["omega", "gama"] } },
+//   {
+//     $currentDate: { lastUpdate: { $type: "timestamp" } },
+//     $max: { power: 500 },
+//   },
+// );
 
 // 17
+db.xmen.updateMany(
+  {class: 'gama'},
+  { $currentDate: { lastUpdate: { $type: "timestamp" } },
+    $min: { power: 300} }
+)
+
 // 18
 // 19
 // 20
