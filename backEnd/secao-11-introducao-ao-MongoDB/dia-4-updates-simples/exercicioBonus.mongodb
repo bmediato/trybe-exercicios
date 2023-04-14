@@ -1,6 +1,6 @@
 use('class');
 
-// db.xmen.find();
+db.xmen.find();
 
 // 14
 // db.xmen.updateMany(
@@ -29,12 +29,18 @@ use('class');
 // );
 
 // 17
-db.xmen.updateMany(
-  {class: 'gama'},
-  { $currentDate: { lastUpdate: { $type: "timestamp" } },
-    $min: { power: 300} }
-)
+// db.xmen.updateMany(
+//   {class: 'gama'},
+//   { $currentDate: { lastUpdate: { $type: "timestamp" } },
+//     $min: { power: 300} }
+// )
 
 // 18
+db.xmen.updateMany(
+  {class: { $exists: false }},
+  { $currentDate: { lastUpdate: { $type: "timestamp" } },
+    $inc: { power: -100 }}
+)
+
 // 19
 // 20
