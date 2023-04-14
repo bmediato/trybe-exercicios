@@ -1,6 +1,6 @@
 use('cinema');
 
-// db.movies.find();
+db.movies.find();
 
 // 1
 // db.movies.updateOne(
@@ -51,13 +51,18 @@ use('cinema');
 // );
 
 // 9
-db.movies.updateMany(
-  { title: 'Godzilla' },
-  { $max: {imdbRating: 8.6},
-    $set: {'category.1': 'thriller'}}
-)
+// db.movies.updateMany(
+//   { title: 'Godzilla' },
+//   { $max: {imdbRating: 8.6},
+//     $set: {'category.1': 'thriller'}}
+// )
 
 // 10
+// db.movies.updateOne(
+//   { title: 'Home Alone' },
+//   { $currentDate: { lastUpdate: {$type:'timestamp'}}}
+// )
+
 // 11
 // 12
 // 13
