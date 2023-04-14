@@ -39,12 +39,17 @@ use('cinema');
 // );
 
 // 7
-db.movies.updateOne(
-  { title: 'Batman'},
-  { $rename: {budget: 'estimateBudget'}}
-);
+// db.movies.updateOne(
+//   { title: 'Batman'},
+//   { $rename: {budget: 'estimateBudget'}}
+// );
 
 // 8
+db.movies.updateOne(
+  { title: 'Home Alone' },
+  { $min: {budget: 5} }
+);
+
 // 9
 // 10
 // 11
