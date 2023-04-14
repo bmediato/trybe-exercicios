@@ -1,6 +1,6 @@
 use('cinema');
 
-db.movies.find();
+// db.movies.find();
 
 // 1
 // db.movies.updateOne(
@@ -64,5 +64,10 @@ db.movies.find();
 // )
 
 // 11
+db.movies.updateMany(
+  {}, 
+  { $set: { sequels: 0}}
+)
+
 // 12
 // 13
