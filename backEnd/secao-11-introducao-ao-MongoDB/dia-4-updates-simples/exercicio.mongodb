@@ -15,10 +15,15 @@ use('cinema');
 // )
 
 // 3
-db.movies.updateMany(
-  {title: 'Home Alone'},
-  { $set: {budget: 15, imdbRating: 5.5}}
-)
+// db.movies.updateMany(
+//   {title: 'Home Alone'},
+//   { $set: {budget: 15, imdbRating: 5.5}}
+// )
 
 // 4
+db.movies.updateOne(
+  { title: 'Batman'},
+  { $inc: {imdbRating: 2}}
+)
+
 // 5
