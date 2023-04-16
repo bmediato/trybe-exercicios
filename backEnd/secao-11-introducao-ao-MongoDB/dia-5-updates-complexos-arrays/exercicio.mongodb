@@ -3,12 +3,21 @@ use('cinema');
 // db.movies.find();
 
 // 1
-db.movies.updateOne(
-  {title: 'Batman'},
-  { $push: {category: 'superhero'}}
-);
+// db.movies.updateOne(
+//   {title: 'Batman'},
+//   { $push: {category: 'superhero'}}
+// );
 
 // 2
+db.movies.updateMany(
+  { title: 'Batman'},
+  { $push: {
+    category: {
+      $each: [ 'villain', 'comic-based' ]
+    }
+  }}
+);
+
 // 3
 // 4
 // 5
