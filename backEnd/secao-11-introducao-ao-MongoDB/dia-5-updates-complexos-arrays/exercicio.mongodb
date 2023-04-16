@@ -37,12 +37,17 @@ use('cinema');
 // );
 
 // 6
-db.movies.updateOne(
-  {title: 'Batman'},
-  { $addToSet: {category: 'action'}}
-)
+// db.movies.updateOne(
+//   {title: 'Batman'},
+//   { $addToSet: {category: 'action'}}
+// )
 
 // 7
+db.movies.updateMany(
+  {title: {$in: ['Batman', 'Home Alone']}},
+  { $push: {category: "90's"}}
+);
+
 // 8
 // 9
 // 10
