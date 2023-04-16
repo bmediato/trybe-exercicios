@@ -94,22 +94,33 @@ use('cinema');
 // )
 
 // 11
-db.movies.updateOne(
-  {title: 'Batman',
-  'cast.character': 'Batman'},
-  { $push: {'cast.$.actor': 'Christian Bale'}}
-);
+// db.movies.updateOne(
+//   {title: 'Batman',
+//   'cast.character': 'Batman'},
+//   { $push: {'cast.$.actor': 'Christian Bale'}}
+// );
 
-db.movies.updateOne(
-  {title: 'Batman',
-  'cast.character': 'Alfred'},
-  { $push: {'cast.$.actor': 'Michael Caine'}}
-);
+// db.movies.updateOne(
+//   {title: 'Batman',
+//   'cast.character': 'Alfred'},
+//   { $push: {'cast.$.actor': 'Michael Caine'}}
+// );
 
-db.movies.updateOne(
-  {title: 'Batman',
-  'cast.character': 'Coringa'},
-  { $push: {'cast.$.actor': 'Heath Ledger'}}
-);
+// db.movies.updateOne(
+//   {title: 'Batman',
+//   'cast.character': 'Coringa'},
+//   { $push: {'cast.$.actor': 'Heath Ledger'}}
+// );
 
 // 12
+db.movies.updateOne(
+  { title: 'Batman',
+    'cast.character': 'Batman'},
+    {$push: {'cast.$.actor': { $each: [
+      'Michael Keaton',
+      'Val Kilmer',
+      'George Clooney'
+    ],
+  $sort: 1
+}}}
+)
