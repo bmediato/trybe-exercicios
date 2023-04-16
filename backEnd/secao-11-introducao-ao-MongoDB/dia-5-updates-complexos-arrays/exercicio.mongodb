@@ -19,12 +19,17 @@ use('cinema');
 // );
 
 // 3
-db.movies.updateOne(
-  {title: 'Batman'},
-  {$pop: {category: -1 }}
-);
+// db.movies.updateOne(
+//   {title: 'Batman'},
+//   {$pull: {category: 'action' }}
+// );
 
 // 4
+db.movies.updateOne(
+  {title: 'Batman'},
+  {$pop: {category: -1}}
+)
+
 // 5
 // 6
 // 7
