@@ -9,16 +9,21 @@ use('cinema');
 // );
 
 // 2
-db.movies.updateMany(
-  { title: 'Batman'},
-  { $push: {
-    category: {
-      $each: [ 'villain', 'comic-based' ]
-    }
-  }}
-);
+// db.movies.updateMany(
+//   { title: 'Batman'},
+//   { $push: {
+//     category: {
+//       $each: [ 'villain', 'comic-based' ]
+//     }
+//   }}
+// );
 
 // 3
+db.movies.updateOne(
+  {title: 'Batman'},
+  {$pop: {category: -1 }}
+);
+
 // 4
 // 5
 // 6
