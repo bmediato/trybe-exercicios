@@ -1,6 +1,6 @@
 use('cinema');
 
-// db.movies.find();
+db.movies.find();
 
 // 1
 // db.movies.updateOne(
@@ -43,12 +43,29 @@ use('cinema');
 // )
 
 // 7
-db.movies.updateMany(
-  {title: {$in: ['Batman', 'Home Alone']}},
-  { $push: {category: "90's"}}
-);
+// db.movies.updateMany(
+//   {title: {$in: ['Batman', 'Home Alone']}},
+//   { $push: {category: "90's"}}
+// );
 
 // 8
+db.movies.updateOne(
+  {title: 'Home Alone'},
+  { $push: { cast: { $each: [
+    {
+      "actor": "Macaulay Culkin",
+      "character": "Kevin"
+    },
+    {
+      "actor": "Joe Pesci",
+      "character": "Harry"
+    },
+    {
+      "actor": "Daniel Stern"
+    }
+  ]}}}
+)
+
 // 9
 // 10
 // 11
