@@ -31,12 +31,17 @@ use('cinema');
 // )
 
 // 5
-db.movies.updateOne(
-  {title: 'Batman'},
-  {$pop: {category: 1}}
-);
+// db.movies.updateOne(
+//   {title: 'Batman'},
+//   {$pop: {category: 1}}
+// );
 
 // 6
+db.movies.updateOne(
+  {title: 'Batman'},
+  { $addToSet: {category: 'action'}}
+)
+
 // 7
 // 8
 // 9
