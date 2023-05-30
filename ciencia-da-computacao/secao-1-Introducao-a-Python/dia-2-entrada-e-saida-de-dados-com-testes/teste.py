@@ -15,3 +15,29 @@
 
 # err = "Arquivo não encontrado"
 # print(f"Erro aconteceu: {err}", file=sys.stderr)
+
+
+# 4
+# a, b = "cd"
+# print(a)  # saída: c
+# print(b)  # saída: d
+
+# head, *tail = (
+#     1,
+#     2,
+#     3,
+# )  # Quando um * está presente no desempacotamento, os valores são
+# # desempacotados em formato de lista.
+
+# print(head)  # saída: 1
+# print(tail)  # saída: [2, 3]
+
+
+while True:
+    try:
+        x = int(input("Por favor digite um número inteiro: "))
+        break
+    except ValueError:
+        # 'ValueError' é a exceção que ocorre quando a função int() recebe um
+        # valor que não pode ser traduzido para número inteiro
+        print("Oops! Esse não era um número inteiro. Tente novamente...")
