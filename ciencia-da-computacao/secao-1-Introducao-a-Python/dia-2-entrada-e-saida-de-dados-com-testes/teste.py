@@ -10,8 +10,8 @@
 # print("O valor recebido foi:", user_input)
 
 # 3
-import sys
+# import sys
 
 
-err = "Arquivo não encontrado"
-print(f"Erro aconteceu: {err}", file=sys.stderr)
+# err = "Arquivo não encontrado"
+# print(f"Erro aconteceu: {err}", file=sys.stderr)
