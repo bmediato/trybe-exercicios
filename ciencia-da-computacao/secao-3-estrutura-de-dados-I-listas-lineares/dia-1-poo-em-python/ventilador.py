@@ -5,7 +5,7 @@ class Ventilador:
         self.__potencia = potencia
         self.__tensao = tensao
         self.__ligado = False
-   
+
     def cor(self):
         return self.__cor
 
